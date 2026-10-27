@@ -104,14 +104,49 @@ flowchart LR
 
 ---
 
+## Demo workbook
+
+[`demo/finance-system-demo.xlsx`](demo/finance-system-demo.xlsx) is a working replica of the system's core with three months of **synthetic data** — 1,190+ live formulas, Arabic right-to-left like the production files. Only the yellow cells are inputs; everything else recalculates.
+
+| Daily sales, drawer expenses & cash reconciliation |
+|---|
+| ![Daily sales](screenshots/02-daily-sales.png) |
+
+| Payroll — commissions, target bonus, overtime, advances pulled from the daily sheet |
+|---|
+| ![Payroll](screenshots/03-payroll.png) |
+
+| General ledger — manual invoices + automatic monthly postings (shaded) |
+|---|
+| ![Ledger](screenshots/04-ledger.png) |
+
+| Income statement | KSA VAT | Validation |
+|---|---|---|
+| ![P&L](screenshots/05-income-statement.png) | ![VAT](screenshots/06-vat.png) | ![Checks](screenshots/07-validation.png) |
+
+| Settings — lists, chart of accounts, payroll rules |
+|---|
+| ![Settings](screenshots/01-settings.png) |
+
+### Rebuild it
+
+```bash
+pip install openpyxl
+python src/build/build.py        # writes demo/finance-system-demo.xlsx and sample-data/*.csv
+```
+
+Open the file in Excel or LibreOffice to calculate. Change a payroll rule or a salary in **الإعدادات** and watch payroll, ledger, income statement and checks update.
+
+---
+
 ## Repository structure
 
 ```
-screenshots/      Demo screenshots (synthetic data)
-src/build/        Python scripts that generate the demo workbook
-src/apps-script/  Owner web app source
-sample-data/      Synthetic data used by the demo
-docs/             Architecture and design notes
+demo/             The generated demo workbook
+screenshots/      Sheet screenshots (synthetic data)
+src/build/        Python scripts that generate the demo (style · data · build)
+src/apps-script/  Owner web app source (Code.gs + Index.html)
+sample-data/      Synthetic inputs as CSV
 ```
 
 ---
