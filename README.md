@@ -179,4 +179,4 @@ sample-data/      Synthetic inputs as CSV
 
 **Omar Hamdy** — Financial Data Analyst with an accounting background, building automated finance and reporting systems for businesses in Egypt and Saudi Arabia.
 
-[LinkedIn](https://www.linkedin.com/in/omar-hamdy-3a8b82110/)
+[LinkedIn](https://www.linkedin.com/in/omarhamdy-analyst/)
