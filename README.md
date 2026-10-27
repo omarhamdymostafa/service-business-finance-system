@@ -95,12 +95,17 @@ flowchart LR
 
 ## Results
 
-<!-- TODO: replace with real figures -->
-- Monthly closing time: **[before] → [after]**
-- Cash reconciliation: **[before] → [after]**
-- Payroll preparation: **[before] → [after]**
-- 4+ years of records consolidated into one ledger
-- Engagement grew from a one-off project to a **monthly retainer**
+| Area | Before | After |
+|---|---|---|
+| Accounting | No books, no monthly close | Coded general ledger with automatic monthly postings |
+| Financial statements | None — the owner had no P&L | Monthly income statement, cash flow and balance sheet, plus a multi-year summary |
+| Payroll | Built by hand each month, pulling data from several sources | One payroll sheet computing commissions, targets, overtime, deductions and advances automatically |
+| Cash control | No daily reconciliation | Daily reconciliation per payment channel with surplus / shortage flags |
+| VAT | Liability not tracked | VAT due, paid and outstanding visible at any time |
+| History | Records split across yearly files | 4+ years (2022 → today) in a single ledger |
+| Owner access | Several spreadsheets to open | Opens a web app with live payroll and financials |
+
+**The engagement grew from a one-off spreadsheet request into a monthly retainer.**
 
 ---
 
