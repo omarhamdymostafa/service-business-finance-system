@@ -69,9 +69,27 @@ flowchart LR
 - VAT **due vs. paid vs. outstanding**, with the unpaid balance carried as a liability (paid in instalments)
 
 ### 5. Owner web app
-- Built with **Google Apps Script** on top of the sheets
-- Live payroll view and financial statements in one place
+- Built with **Google Apps Script** on top of the sheets — Arabic, right-to-left, works on phone and desktop
+- **Dashboard:** revenue, expenses, net profit and payroll for any period, with monthly trends
+- **Payroll:** every employee's dues, deductions and net pay, with actions for attendance, bonuses, salary changes and advances
+- **Finance:** income statement, cash flow, balance sheet, VAT by quarter, the month's ledger, and expenses by category and supplier
+- **Analytics:** payroll-to-revenue ratio, return on every riyal of salary, fixed vs. variable costs, profit margin trend
+- **Team:** employee records with alerts for residency permits, work permits, insurance and contracts about to expire
 - Simple data entry (new employee, salary change, invoice, expense, revenue) written straight back to the sheets — the owner no longer opens a spreadsheet
+
+**▶ [Live demo](https://omarhamdymostafa.github.io/service-business-finance-system/demo/webapp/)** — the real interface running on synthetic data (saving is disabled).
+
+| Dashboard | Finance |
+|---|---|
+| ![Dashboard](screenshots/webapp-dash.png) | ![Finance](screenshots/webapp-fin.png) |
+
+| Payroll | Analytics |
+|---|---|
+| ![Payroll](screenshots/webapp-pay.png) | ![Analytics](screenshots/webapp-ana.png) |
+
+| Team & document alerts |
+|---|
+| ![Team](screenshots/webapp-team.png) |
 
 ### 6. Power BI report
 - Management view of sales, expenses and profitability on the same data
@@ -147,10 +165,11 @@ Open the file in Excel or LibreOffice to calculate. Change a payroll rule or a s
 ## Repository structure
 
 ```
-demo/             The generated demo workbook
+demo/             Demo workbook + browser demo of the web app (demo/webapp)
 screenshots/      Sheet screenshots (synthetic data)
 src/build/        Python scripts that generate the demo (style · data · build)
 src/apps-script/  Owner web app source (Code.gs + Index.html)
+src/webapp-demo/  Mock data layer that runs the web app without Google
 sample-data/      Synthetic inputs as CSV
 ```
 
